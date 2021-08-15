@@ -48,3 +48,17 @@ const users = [
        console.log(scores85);
    };
    scoresGreaterThan85(users);
+
+
+
+function addUser(user) {
+	var index = users.findIndex(x => x.name == user.name)
+	if (index === -1){
+		users.push(user);
+	}else {
+		console.log("user already exists")
+	}
+}
+var user = {name:"neha",scores:90,skills:['HTM', 'CSS', 'JS'],age:20};
+addUser(user);
+console.log(users);
